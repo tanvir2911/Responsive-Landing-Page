@@ -17,7 +17,7 @@ body{
     margin-right: auto;
 }
 
-#logo{
+.logo{
     color:rgb(66, 65, 87);
     font-style: italic;
 }
@@ -274,6 +274,10 @@ body{
     filter: grayscale(100%);
 }
 
+#contact-us h1{
+    text-align: center;
+}
+
 #contact-us::before {
     content: "";
     position: absolute;
@@ -281,84 +285,62 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); 
     z-index: 1;
 }
 
 #contact-us-form {
     position: relative;
     z-index: 2;
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 500px; 
+    margin: 0 auto;
+    backdrop-filter: blur(5px); 
 }
+
 
 #form {
     position: relative;
     width: 100%;
     margin: 50px auto 100px auto;
-  }
-  
-  input {
-    font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
-    width: 470px;
-    height: 50px;
-    padding: 0px 15px 0px 15px;
-    
-    background: transparent;
-    outline: none;
-    color: #726659;
-    
-    border: solid 1px #b3aca7;
-    border-bottom: none;
-    
-  }
-  
-  input:hover {
-    background: #b3aca7;
-    color: #e2dedb;
-  }
-  
-  textarea {
-    width: 470px;
-    max-width: 470px;
-    height: 110px;
-    max-height: 110px;
-    padding: 15px;
-    
-    background: transparent;
-    outline: none;
-    
-    color: #726659;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
-    
-    border: solid 1px #b3aca7;
+    display: flex;
+    flex-direction: column;
+}
 
+input{
+    padding:10px;
+}
+
+textarea{
+    padding:10px;
+}
+ 
+
+  #footer{
+    padding: 100px 100px 100px 20px;
+    background-color: #1b1a1a;
+    color:white;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
   }
   
-  textarea:hover {
-    background: #b3aca7;
-    color: #e2dedb;
+  .footer-column{
+    display: flex;
+    flex-direction: column;
   }
-  
-  #submit {
-    width: 502px;
-    
-    padding: 0;
-    margin: -5px 0px 0px 0px;
-    
-    font-family: 'Lato', sans-serif;
-    font-size: 0.875em;
-    color: #b3aca7;
-    
-    outline:none;
-    cursor: pointer;
-    
-    border: solid 1px #b3aca7;
-    border-top: none;
+
+  .social-logos{
+    display: flex;
   }
-  
-  #submit:hover {
-    color: #e2dedb;
+
+  .social-logos img{
+    width: 20px;
+    filter: invert(100%) brightness(100%);
+    margin-right: 10px;
   }
 
 @media only screen and (max-width: 600px) {
@@ -401,8 +383,7 @@ body{
         flex-direction: column;
         gap:20px;
     }
-
-    /* input,textarea, #submit{
-        width: 100px;
-    } */
+    #footer{    
+        flex-direction: column;
+    }
 }
